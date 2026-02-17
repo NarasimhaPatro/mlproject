@@ -145,6 +145,9 @@ env.bak/
 venv.bak/
 mlproject/
 
+# Folder Handle
+catboost_info/
+
 # Spyder project settings
 .spyderproject
 .spyproject
