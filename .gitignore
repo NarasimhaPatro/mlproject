@@ -147,6 +147,7 @@ mlproject/
 
 # Folder Handle
 catboost_info/
+artifacts/
 
 # Spyder project settings
 .spyderproject
