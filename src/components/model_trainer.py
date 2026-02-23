@@ -106,7 +106,7 @@ class ModelTrainer:
             if best_model_score < 0.6:
                 raise CustomException("No best model found")
 
-            logger.info(f"Best model: {best_model_name} | R2 Score: {best_model_score}")
+            logger.info(f"Best model: {best_model_name} | R2 Score: {best_model_score * 100} %")
 
             # Save best model
             save_object(
