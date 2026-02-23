@@ -10,10 +10,15 @@ class PredictPipeline:
 
     def predict(self, features):
          try:
-            model_path = os.path.join('artifacts', 'model.pkl')
+            # Get the Pickel File Folder Path
             preprocessor_path = os.path.join('artifacts', 'preprocessor.pkl')
-            model = load_object(file_path = model_path)
+            model_path = os.path.join('artifacts', 'model.pkl')
+            
+            # Load the Pickel File from Folder Path
             preprocessor = load_object(file_path = preprocessor_path)
+            model = load_object(file_path = model_path)
+
+            # Use the preprocessor.pkl later model.pkl file to predict
             data_scaled = preprocessor.transform(features)
             preds = model.predict(data_scaled)
             return preds
